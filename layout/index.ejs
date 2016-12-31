@@ -1,0 +1,13 @@
+<% page.posts.each(function (post) { %>
+  <div class="article-item">
+    <a class="article-item-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
+    <p class="article-item-date"><%- date(post.date, "YYYY-MM-DD") %></p>
+    <p>
+      <%- post.excerpt %>
+    </p>
+    <p>
+      <a href="#">继续阅读</a>
+    </p>
+  </div>
+<% }) %>
+<%- partial('_partial/paginator') %>

@@ -1,0 +1,11 @@
+<header id="page-header">
+  <div id="header-title">
+    <a href="<%- url_for() %>">一片杉薄荷</a>
+  </div>
+  <div id="header-nav">
+    <ul>
+      <% for (name in theme.menu) { %>
+        <li><a class="<%- name === '目录' && page.layout !== 'post' ? 'active' : '' %>" href="<%- url_for(theme.menu[name]) %>"><%= name %></a></li>
+      <% } %>
+    </ul>
+</header>
