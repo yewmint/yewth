@@ -1,10 +1,11 @@
 <% if (page.total > 1){ %>
   <nav class="paginator">
     <% if(page.prev != 0){ %>
-    <a class="paginator-prev" href="<%- url_for(page.prev_link) %>">上一页</a>
+    <a class="paginator-prev" href="<%- url_for(page.prev_link) %>">PREV</a>
     <% } %>
+    <span><%- page.current %> of <%- page.total %></span>
     <% if(page.next != 0){ %>
-    <a class="paginator-next" href="<%- url_for(page.next_link) %>">下一页</a>
+    <a class="paginator-next" href="<%- url_for(page.next_link) %>">NEXT</a>
     <% } %>
   </nav>
 <% } %>

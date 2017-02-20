@@ -11,16 +11,31 @@ html {
     font-size: 16px;
 }
 
+a:link, a:visited{
+  background-image: none;
+  font-weight: normal;
+  color: #49c371;
+}
+
+a.menu-item:link, a.menu-item:visited{
+  color: #636463
+}
+
 a:focus{
   outline: none;
 }
 
+ol li{
+  list-style: disc;
+  margin-left: 2rem;
+}
+
 h1{
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
   color: #4c6575;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.8rem;
   //padding-left: 1rem;
   //border-left: 2px solid #ea7da7;
 }
@@ -30,17 +45,17 @@ h2{
   line-height: 1.1rem;
   color: #4c6575;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   padding-left: 1rem;
   border-left: 2px solid #ea7da7;
 }
 
-h3{
+h3, h4, h5, h6{
   font-size: 1.0rem;
   line-height: 1.0rem;
-  color: #7896a9;
+  color: #768188;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.3rem;
   padding-left: 1rem;
   border-left: 2px solid #ea7da7;
 }
@@ -81,9 +96,12 @@ strong {
 }
 
 #page-header{
-  padding: 30px 0px;
-  height: 1.3rem;
-  padding-bottom: 4rem;
+  padding: 2rem 0 2rem;
+  margin-bottom: 2rem;
+  line-height: 2rem;
+  height: 2rem;
+  text-align: center;
+  border-bottom: 1px solid #d0bab9;
 }
 @media only screen and (max-width: 700px){
   #page-header{
@@ -183,17 +201,18 @@ a.article-item-title{
 .paginator{
   margin: auto;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .paginator a{
   padding: 8px 12px;
-  background-color: #ffa1c5;
+  background-color: transparent;
   border-radius: 0.3rem;
-  border-bottom: 0.3rem solid #da5d8d;
+  border: 1px solid #d0bab9;
   background-image: none;
   font-weight: normal;
-  color: #fff;
+  color: #ea4c89;
   font-size: 0.8rem;
   margin: 1rem 1rem;
 }
@@ -201,4 +220,33 @@ a.article-item-title{
 .paginator-next{
   position: relative;
   right: 0;
+}
+
+figure.highlight{
+  background-color: #f9f9f9;
+  padding: 0 1rem;
+}
+
+figure pre{
+  white-space: pre;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+
+figure table{
+  display: block;
+  max-width: 100%;
+  overflow-y: hidden;
+}
+
+figure table, figure tbody, figure tr, figure, td{
+  display: block;
+  max-width: 100%;
+}
+
+figure td.code{
+  padding: 0;
+}
+
+figure td.gutter{
+  display: none;
 }
