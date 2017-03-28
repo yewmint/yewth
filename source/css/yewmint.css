@@ -17,6 +17,10 @@ a:link, a:visited{
   color: #49c371;
 }
 
+article.article a:link, article.article a:visited{
+  border-bottom: 1px solid #49c371;
+}
+
 a.menu-item:link, a.menu-item:visited{
   color: #636463
 }
