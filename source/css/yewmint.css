@@ -30,8 +30,9 @@ a:focus{
 }
 
 ol li{
-  list-style: disc;
+  list-style: decimal;
   margin-left: 2rem;
+  padding-left: 0.5rem;
 }
 
 h1{
