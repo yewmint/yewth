@@ -1,0 +1,14 @@
+{
+  "name": "yewth",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/yewmint/yewth.git",
+  "author": "yewmint <yewmint@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "cd ./source/css && cat normalize.css Torpedo.css yewth-plus.css | csso > yewth.min.css"
+  },
+  "dependencies": {
+    "csso": "^4.0.2"
+  }
+}
