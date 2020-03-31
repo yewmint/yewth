@@ -1,0 +1,28 @@
+<% 
+  let postByYear = {}
+  let years = []
+
+  site.posts.forEach((post) => {
+    let year = post.date.year()
+    if (!postByYear.hasOwnProperty(year)) {
+      years.push(year)
+      postByYear[year] = []
+    }
+    postByYear[year].push(post)
+  })
+%>
+
+<div class="archive-wrapper">
+<% for (let year of years) { %>
+  <h1 class="archive-year-title"><%- year %></h1>
+
+  <div class="archive-year-section">
+    <% for (let post of postByYear[year]) { %>
+      <div class="archive-post">
+        <span class="archive-post-date"><i class="icon-calendar"></i> <%- post.date.format('MMMM Do') %></span>
+        <a class="archive-post-title" href="<%- url_for(post.path) %>"><%- post.title %></a>
+      </div>    
+    <% } %>
+  </div>
+<% } %>
+</div>

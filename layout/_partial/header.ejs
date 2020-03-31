@@ -1,11 +1,11 @@
 <header id="page-header">
   <div id="header-title">
-    <a href="<%- url_for() %>"><%- config.title %></a>
+    <img id="logo" src="/img/logo.png" alt="logo" width="64" height="64" />
+    <a href="<%- url_for('') %>"><%- config.title %></a>
   </div>
   <div id="header-nav">
-    <ul>
-      <% for (name in theme.menu) { %>
-        <li><a target="_blank" class="menu-item <%- name === 'Index' && page.layout !== 'post' ? 'active' : '' %>" href="<%- url_for(theme.menu[name]) %>"><%= name %></a></li>
-      <% } %>
-    </ul>
+    <a href="/archives" class="nav-item"><i class="icon-box"></i> Archive</a>
+    <a href="/atom.xml" class="nav-item"><i class="icon-rss"></i> Feed</a>
+    <a href="https://github.com/yewmint" target="_blank" class="nav-item"><i class="icon-github"></i> GitHub</a>
+  </div>
 </header>

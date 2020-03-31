@@ -1,11 +1,14 @@
 <% if (page.total > 1){ %>
   <nav class="paginator">
     <% if(page.prev != 0){ %>
-    <a class="paginator-prev" href="<%- url_for(page.prev_link) %>">PREV</a>
+      <a class="paginator-prev" href="<%- url_for(page.prev_link) %>"><i class="icon-left-big"></i></a>
+    <% } else {%>
+      <a class="paginator-prev" disabled><i class="icon-left-big"></i></a>
     <% } %>
-    <span><%- page.current %> of <%- page.total %></span>
+      <span><%- page.current %> / <%- page.total %></span>
     <% if(page.next != 0){ %>
-    <a class="paginator-next" href="<%- url_for(page.next_link) %>">NEXT</a>
-    <% } %>
-  </nav>
+    <a class="paginator-next" href="<%- url_for(page.next_link) %>"><i class="icon-right-big"></i></a>
+    <% } else {%>
+      <a class="paginator-next" disabled><i class="icon-right-big"></i></a>
+    <% } %>  </nav>
 <% } %>

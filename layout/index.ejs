@@ -1,12 +1,14 @@
 <% page.posts.each(function (post) { %>
   <div class="article-item">
-    <a class="article-item-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
-    <p class="article-item-date"><%- date(post.date, "YYYY-MM-DD") %></p>
+    <h1 class="article-item-title">
+      <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+    </h1>
+    <p class="article-item-date"><i class="icon-calendar"></i> <%- date(post.date, "YYYY-MM-DD") %></p>
     <p>
       <%- post.excerpt %>
     </p>
     <p>
-      <a href="<%- url_for(post.path) %>">continue -&gt;</a>
+      <a href="<%- url_for(post.path) %>">Continue <i class="icon-right-big"></i></a>
     </p>
   </div>
 <% }) %>
