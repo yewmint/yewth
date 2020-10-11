@@ -354,13 +354,15 @@ blockquote {
   position: relative;
   background-color: #f9f9f9;
   border-radius: 0.6rem;
-  padding: 1rem 0.5rem 0.5rem;
+  padding: 1rem 1rem 0.5rem 0.5rem;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 @media only screen and (max-width: 50rem){
   blockquote {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
