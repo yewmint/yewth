@@ -10,6 +10,10 @@
     }
     postByYear[year].push(post)
   })
+
+  for (let year of Object.keys(postByYear)) {
+    postByYear[year] = postByYear[year].sort((a, b) => b.date.valueOf() - a.date.valueOf());
+  }
 %>
 
 <div class="archive-wrapper">
@@ -19,7 +23,7 @@
   <div class="archive-year-section">
     <% for (let post of postByYear[year]) { %>
       <div class="archive-post">
-        <span class="archive-post-date"><i class="icon-calendar"></i> <%- post.date.format('MMMM Do') %></span>
+        <span class="archive-post-date"><i class="icon-calendar-1"></i> <%- post.date.format('MMMM Do') %></span>
         <a class="archive-post-title" href="<%- url_for(post.path) %>"><%- post.title %></a>
       </div>    
     <% } %>

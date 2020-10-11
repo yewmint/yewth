@@ -14,7 +14,7 @@ li {
 }
 
 p {
-  line-height: 1.5rem;
+  line-height: 1.8rem;
 }
 
 a:link, a:visited{
@@ -30,7 +30,8 @@ a:link, a:visited{
 
 article.article img{
   display: block;
-  margin: 0 auto;
+  margin: 1.5rem auto 0;
+  max-width: 100%;
   box-shadow: 0 2px 4px 0px #00000066;
 }
 
@@ -243,6 +244,7 @@ strong {
 }
 
 .article-item-title {
+  margin-top: 1.6rem;
   margin-bottom: 1rem;
 }
 
@@ -254,7 +256,7 @@ strong {
 
 .article-item-date{
   font-size: 0.85rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1rem;
   color: #8c8c8c;
 }
 
@@ -319,6 +321,7 @@ figure.highlight{
   background-color: #f9f9f9;
   border-radius: 0.6rem;
   padding: 0 1rem;
+  margin: 0;
 }
 
 @media only screen and (max-width: 50rem){
@@ -421,6 +424,11 @@ ol li::before {
 
   content: counter(ol-counter) ". ";
   color: #FF7260;
+}
+
+p.img-caption {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .archive-wrapper {
