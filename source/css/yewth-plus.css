@@ -449,3 +449,9 @@ p.img-caption {
 .archive-post-title {
   padding-left: 1rem;
 }
+
+.utterances-container {
+  border-top: 1px solid #d2aba6;
+  margin-top: 3rem;
+  padding-top: 0.6rem;
+}

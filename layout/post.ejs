@@ -1,7 +1,21 @@
 <article class="article">
-  <h1 id="-" class="article-title"><%= page.title %></h1>
+  <h1 id="-" class="article-title">
+    <%= page.title %>
+  </h1>
   <p class="article-date">
-    <i class="icon-calendar-1"></i> <%- date(page.date, "YYYY-MM-DD") %>
+    <i class="icon-calendar-1"></i>
+    <%- date(page.date, "YYYY-MM-DD" ) %>
   </p>
   <%- page.content %>
+
+  <div class="utterances-container">
+    <script 
+      src="https://utteranc.es/client.js" 
+      repo="yewmint/blog-comment" 
+      issue-term="<%= page.title %>"
+      theme="github-light" 
+      crossorigin="anonymous" 
+      async>
+    </script>
+  </div>
 </article>
